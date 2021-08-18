@@ -1,15 +1,17 @@
-<header>
+<head>
     <title>Coromandel's CFM Web Stream</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-</header>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet"> 
+</head>
 
 <body>
     <center>
         <h2>Coromandel's CFM Web Stream</h2>
-        <a>The RF feed is captured from a Sony ST-JX411 Stereo FM Tuner via an M-Audio MobilePre USB interface.</a>
-		<br>
-		<a>"SP" stands for 'Sam's Processing', and it's exactly that. A digital audio feed is captured and processed.</a>
-        <br>
+        <p>The RF feed is captured from a Sony ST-JX411 Stereo FM Tuner via an M-Audio MobilePre USB interface.</p>
+		<p>"SP" stands for 'Sam's Processing', and it's exactly that. A digital audio feed is captured and processed.</p>
         <br>
         <audio id="stream-audio" preload="none"></audio>
 		<button onclick="set_stream_quality('//icecast.sjh.at/cfmrf-uhq');">Lossless FLAC RF</button><button onclick="set_stream_quality('//icecast.sjh.at/cfmsp-uhq');">Lossless FLAC SP</button>
@@ -24,13 +26,11 @@
 		<br>
         <div id="volume-control">
 			<br>
-            <a><b>Volume: </b></a>
-            <label class="vol-percentage" for="vol-percentage">20</label><a>%</a>
+            <b>Volume: </b><label class="vol-percentage" for="vol-percentage">20</label><a>%</a>
             <br>
             <input id="vol-control" type="range" min="0" max="100" step="0.1" value="20" oninput="set_volume(this.value)" onchange="set_volume(this.value)"></input>
         </div>
-        <br>
-        <a><b>Now Playing: </b></a>
+        <p style="margin-top:10px;"><b>Now Playing: </b></p>
         <div class="track-title"></div>
     </center>
 
